@@ -27,3 +27,8 @@ const slides = document.querySelectorAll('.slide-item'),
     prev.addEventListener('click', () => {
         plusSlide(-1);
     })
+
+// scroll
+document.querySelector('.scrooll').addEventListener('click', function() {
+    document.querySelector('.booking-number').scrollIntoView({ behavior: 'smooth' });
+});
