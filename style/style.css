@@ -209,6 +209,10 @@ header {
 .header .company__item:last-child {
   margin-right: 0;
 }
+.header__info .dropdown-content {
+  min-width: 178px;
+  top: 24px;
+}
 .header .info {
   display: flex;
   align-items: center;
@@ -230,7 +234,7 @@ header {
   background: url("../img/phone.svg");
   background-repeat: no-repeat;
   left: -41px;
-  top: -8px;
+  top: -2px;
 }
 .header .info__phone::after {
   position: absolute;
@@ -240,7 +244,7 @@ header {
   background: url("../img/arrow.svg");
   background-repeat: no-repeat;
   right: 0px;
-  top: 8px;
+  top: 14px;
 }
 .header .info__search {
   margin-left: 50px;
@@ -840,4 +844,67 @@ footer .footer__dev {
 }
 footer .footer__dev img {
   margin-left: 10px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #c6e3e3;
+  min-width: 220px;
+  z-index: 1;
+  top: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.dropdown-content a {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.dropdown-content a:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown-content a:hover {
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+}
+
+.dropdown-content a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-content a:hover::after {
+  visibility: visible;
+  width: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown:hover .dropbtn {
+  color: #69ebd0;
 }/*# sourceMappingURL=style.css.map */
